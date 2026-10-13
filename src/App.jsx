@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const portfolioEmail = "abdullah03362@gmail.com";
-const roleWords = ["frontend developer", "curious creator", "lifelong learner"];
+const roleWords = ["Backend Developer", "Problem Solver", "lifelong learner"];
 
 const sections = [
   { id: "home", number: "01", label: "Home" },
