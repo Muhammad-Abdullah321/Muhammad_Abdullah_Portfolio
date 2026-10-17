@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const portfolioEmail = "abdullah03362@gmail.com";
-const roleWords = ["Backend Developer", "Problem Solver", "lifelong learner"];
+const portfolioPhone = "+923287037013";
+const githubUrl = "https://github.com/Muhammad-Abdullah321";
+const linkedinUrl = "https://linkedin.com/in/m-abdullah-hammad-8392642ab";
+const roleWords = ["Backend Developer", "Software Engineering Student"];
 
 const sections = [
   { id: "home", number: "01", label: "Home" },
@@ -13,66 +16,63 @@ const sections = [
 ];
 
 const skills = [
-  { name: "React", className: "bubble--large" },
+  { name: "Node.js", className: "bubble--large" },
   { name: "JavaScript", className: "bubble--orange" },
-  { name: "CSS", className: "bubble--small" },
-  { name: "UI / UX", className: "bubble--cream" },
-  { name: "HTML", className: "bubble--small bubble--outline" },
-  { name: "Git", className: "bubble--orange bubble--small" },
-  { name: "Responsive", className: "bubble--cream bubble--wide" },
+  { name: "MongoDB", className: "bubble--small" },
+  { name: "Express.js", className: "bubble--cream" },
+  { name: "PostgreSQL", className: "bubble--small bubble--outline" },
+  { name: "Python", className: "bubble--orange bubble--small" },
+  { name: "React.js", className: "bubble--cream bubble--wide" },
 ];
 
 const projects = [
   {
     number: "01",
-    name: "Your project name",
-    type: "WEB DESIGN · DEVELOPMENT",
+    name: "BugNest — Bug Tracking & Management System",
+    type: "BUG TRACKING",
     description:
-      "A short introduction to your project: what you made, who it helps, and what makes it special.",
-    tags: ["React", "Design"],
+      "Built a REST API to create, track, categorize, and manage bugs through their lifecycle. Added authentication, protected routes, validation, and structured error handling.",
+    tags: ["Node.js", "Express.js", "MongoDB", "React.js"],
     theme: "project-card--coral",
     visual: "store",
-    url: "https://github.com/",
   },
   {
     number: "02",
-    name: "Another good idea",
-    type: "PRODUCT · FRONTEND",
+    name: "Authentication API — Secure Authentication System",
+    type: "AUTHENTICATION API",
     description:
-      "Tell the story behind a project and the thoughtful details you brought to the experience.",
-    tags: ["JavaScript", "UI"],
+      "Created a reusable API for registration and login with password hashing, JWT authentication, and protected routes. Implemented role-based access control and validation.",
+    tags: ["Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
     theme: "project-card--lime",
     visual: "music",
-    url: "https://github.com/",
   },
   {
     number: "03",
-    name: "A little experiment",
-    type: "CREATIVE DEVELOPMENT",
+    name: "Job Management System — Full-Stack Web Application",
+    type: "FULL-STACK APPLICATION",
     description:
-      "Show another piece of work, a side project, or something you built just to learn.",
-    tags: ["Creative code", "Web"],
+      "A centralized job tracker for applications, follow-ups, interview progress, and history. Includes per-application resume versions, PostgreSQL/Prisma data models, and weekly/monthly analytics for applications, employer responses, ghosting, and interviews.",
+    tags: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM"],
     theme: "project-card--blue",
     visual: "studio",
-    url: "https://github.com/",
   },
 ];
 
 const journey = [
   {
-    year: "NOW",
-    title: "Making things for the web",
-    text: "Building useful, good-looking digital experiences and always finding something new to learn.",
+    year: "07/2026 — CURRENT",
+    title: "Backend Developer · Revolix Technology",
+    text: "Built Node.js/Express APIs for user, tenant, staff, property, complaint, and booking workflows. Implemented JWT, bcrypt, OTP, refresh-token, HTTP-only-cookie authentication and RBAC; contributed to a MongoDB-to-PostgreSQL migration; integrated Stripe; tested with Postman; and connected React.js with Axios. Separately developed and tested FastAPI/Python APIs with validation, database integration, and structured errors; used Git/GitHub.",
   },
   {
-    year: "RECENTLY",
-    title: "Learning by doing",
-    text: "Growing my skills by turning ideas into real projects, one small detail at a time.",
+    year: "05/2026 — 06/2026",
+    title: "Backend Developer Intern · Revolix Technology",
+    text: "Studied an existing Node.js/Express/MongoDB codebase; tested REST APIs in Postman, documented bugs, and reported backend issues with suggested fixes. Implemented password-hash/JWT authentication and protected routes within existing RBAC, and built or modified CRUD APIs with request validation, error handling, and Git/GitHub conventions.",
   },
   {
-    year: "ALWAYS",
-    title: "Curious about what’s next",
-    text: "Exploring the overlap between thoughtful design, friendly technology, and everyday life.",
+    year: "09/2024 — EXPECTED 09/2028",
+    title: "BS Software Engineering (In Progress) · Virtual University of Pakistan",
+    text: "Karachi, Pakistan. Coursework: Programming, Database Management, Web Development, Software Design, Computer Networks, Operating Systems, and Software Engineering Practices.",
   },
 ];
 
@@ -138,8 +138,8 @@ function ProjectArtwork({ visual }) {
         <div className="store-orbit store-orbit--one" />
         <div className="store-orbit store-orbit--two" />
         <div className="store-sun" />
-        <p>good<br />things<span>.</span></p>
-        <div className="store-button">EXPLORE THE SHOP <span>↗</span></div>
+        <p>BUG<br />NEST<span>.</span></p>
+        <div className="store-button">TRACK THE BUGS <span>↗</span></div>
       </div>
     );
   }
@@ -148,9 +148,9 @@ function ProjectArtwork({ visual }) {
     return (
       <div className="project-art project-art--music" aria-hidden="true">
         <div className="music-disc"><span /></div>
-        <div className="music-note music-note--one">♪</div>
-        <div className="music-note music-note--two">♫</div>
-        <div className="music-title">SIDE A<br /><i>good days</i></div>
+        <div className="music-note music-note--one">JWT</div>
+        <div className="music-note music-note--two">AUTH</div>
+        <div className="music-title">SECURE API<br /><i>auth flows</i></div>
         <div className="music-bars"><i /><i /><i /><i /><i /><i /><i /><i /></div>
       </div>
     );
@@ -159,9 +159,9 @@ function ProjectArtwork({ visual }) {
   return (
     <div className="project-art project-art--studio" aria-hidden="true">
       <div className="studio-frame">
-        <span>AN EXERCISE IN</span>
-        <strong>making<br /><i>space</i></strong>
-        <span>FOR GOOD IDEAS</span>
+        <span>APPLICATION TRACKER</span>
+        <strong>job<br /><i>history</i></strong>
+        <span>FOLLOW-UPS &amp; INTERVIEWS</span>
       </div>
       <div className="studio-spark">✳</div>
     </div>
@@ -188,20 +188,14 @@ function ProjectCard({ project }) {
   }
 
   return (
-    <a
+    <article
       className={`project-card ${project.theme}`}
-      href={project.url}
-      target="_blank"
-      rel="noreferrer"
       ref={cardRef}
       onMouseMove={tiltCard}
       onMouseLeave={resetTilt}
-      onBlur={resetTilt}
-      aria-label={`Open ${project.name} (replace this link with your project)`}
     >
       <div className="project-card-art">
         <ProjectArtwork visual={project.visual} />
-        <span className="project-card-open"><Arrow diagonal /></span>
       </div>
       <div className="project-card-copy">
         <div className="project-card-meta">
@@ -211,7 +205,7 @@ function ProjectCard({ project }) {
         <h3>{project.name}</h3>
         <p>{project.description}</p>
       </div>
-    </a>
+    </article>
   );
 }
 
@@ -226,18 +220,18 @@ function App() {
     const container = scrollContainer.current;
     if (!container) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
-        if (visibleSection) setActiveSection(visibleSection.target.id);
-      },
-      { root: container, threshold: [0.45, 0.65, 0.85] },
-    );
+    function updateActiveSection() {
+      const center = container.getBoundingClientRect().top + container.clientHeight / 2;
+      const activePanel = Array.from(container.querySelectorAll(".panel")).find((panel) => {
+        const bounds = panel.getBoundingClientRect();
+        return bounds.top <= center && bounds.bottom > center;
+      });
+      if (activePanel) setActiveSection(activePanel.id);
+    }
 
-    container.querySelectorAll(".panel").forEach((panel) => observer.observe(panel));
-    return () => observer.disconnect();
+    container.addEventListener("scroll", updateActiveSection, { passive: true });
+    updateActiveSection();
+    return () => container.removeEventListener("scroll", updateActiveSection);
   }, []);
 
   function goToSection(event, id) {
@@ -317,10 +311,9 @@ function App() {
           <div className="panel-inner hero-layout">
             <div className="hero-copy">
               <div className="eyebrow eyebrow--light">
-                <span className="availability-dot" />
-                AVAILABLE FOR OPPORTUNITIES
+                BACKEND DEVELOPER · KARACHI, PAKISTAN
               </div>
-              <p className="hero-kicker">HEY, I’M ABDULLAH —</p>
+              <p className="hero-kicker">HEY, I’M MUHAMMAD ABDULLAH HAMMAD —</p>
               <h1>
                 I make<br />
                 the web feel<br />
@@ -332,8 +325,8 @@ function App() {
                 <span className="type-cursor" aria-hidden="true" />
               </p>
               <p className="hero-description">
-                I turn thoughtful ideas into friendly digital experiences —
-                one detail, one interaction, one line of code at a time.
+                I build backend APIs and full-stack applications, with a focus
+                on authentication, data design, and useful integrations.
               </p>
               <div className="hero-actions">
                 <a className="button button--accent" href="#work" onClick={(event) => goToSection(event, "work")}>
@@ -357,10 +350,10 @@ function App() {
                 <span>GOOD IDEAS<br />GROW HERE</span>
                 <span className="sticker-star">✳</span>
               </div>
-              <div className="hero-vertical-note">INDEPENDENT THINKER · INTENTIONAL BUILDER</div>
+              <div className="hero-vertical-note">REST API DEVELOPMENT · DATABASE DESIGN</div>
             </div>
             <div className="hero-bottom">
-              <span>BASED ON EARTH · AVAILABLE WORLDWIDE</span>
+              <span>BASED IN KARACHI, PAKISTAN</span>
               <span>SCROLL TO EXPLORE ↓</span>
             </div>
           </div>
@@ -372,7 +365,7 @@ function App() {
             <SectionLabel number="01">A LITTLE ABOUT ME</SectionLabel>
             <div className="about-main">
               <div className="about-title">
-                <p className="small-overline">A DEVELOPER WITH A SOFT SPOT FOR DETAILS</p>
+                <p className="small-overline">BACKEND DEVELOPER &amp; SOFTWARE ENGINEERING STUDENT</p>
                 <h2>
                   Good work<br />
                   starts with<br />
@@ -382,29 +375,30 @@ function App() {
               <div className="about-story">
                 <span className="story-quote">“</span>
                 <p>
-                  I believe the best digital experiences don’t ask for
-                  attention — they earn it by feeling just right.
+                  I’m Muhammad Abdullah Hammad, a Backend Developer and
+                  Software Engineering student based in Karachi, Pakistan.
                 </p>
                 <p>
-                  I’m Abdullah, a web developer who enjoys making complex
-                  things feel simple. I care about the people on the other side
-                  of the screen and the little details that make a product
-                  welcoming, useful, and memorable.
+                  I build REST APIs using Node.js, Express.js, and FastAPI,
+                  working across authentication, role-based access control,
+                  database design, and integrations. I have contributed to a
+                  MongoDB-to-PostgreSQL migration and integrated backend
+                  services with React front ends and Stripe.
                 </p>
                 <p>
-                  I’m always learning, always experimenting, and always up for
-                  a good conversation about making the internet a little
-                  better.
+                  Urdu is my native language. I have professional working
+                  proficiency in English: B2 reading, listening, and writing,
+                  and B1 spoken.
                 </p>
                 <a className="inline-link" href={`mailto:${portfolioEmail}`}>
-                  LET’S MAKE SOMETHING GOOD <Arrow />
+                  CONTACT ME <Arrow />
                 </a>
               </div>
             </div>
             <div className="about-facts">
-              <div><span>01</span><strong>Thoughtful<br />by design</strong></div>
-              <div><span>02</span><strong>Curious<br />by nature</strong></div>
-              <div><span>03</span><strong>Always<br />learning</strong></div>
+              <div><span>01</span><strong>Karachi,<br />Pakistan</strong></div>
+              <div><span>02</span><strong>Urdu<br />Native</strong></div>
+              <div><span>03</span><strong>English<br />B2 written · B1 spoken</strong></div>
             </div>
           </div>
           <span className="panel-index">02 <i>/</i> 06</span>
@@ -419,8 +413,12 @@ function App() {
                 <h2>Good tools.<br /><span>Better ideas.</span></h2>
               </div>
               <p className="skills-intro">
-                A mix of skills I use to bring ideas from a first sketch to
-                something you can click, use, and love.
+                Languages: JavaScript, Python, TypeScript. Backend: Node.js,
+                Express.js, FastAPI, REST API development. Databases: MongoDB,
+                PostgreSQL, MySQL. Authentication &amp; API: JWT, bcrypt, RBAC,
+                OTP verification, sessions, Stripe API, Postman. Tools: Git,
+                GitHub, GitLab, Docker. Frontend: React.js, Axios, HTML, CSS,
+                Tailwind CSS.
               </p>
             </div>
             <div className="skill-field" aria-label="Skills and technologies">
@@ -451,25 +449,25 @@ function App() {
             <SectionLabel number="03">A FEW THINGS I’VE MADE</SectionLabel>
             <div className="work-heading">
               <h2>Made with care.<br /><span>Built to be useful.</span></h2>
-              <p>A small selection of projects, experiments, and ideas made real.</p>
+              <p>Projects from my experience building backend APIs and full-stack applications.</p>
             </div>
             <div className="project-grid">
               {projects.map((project) => <ProjectCard key={project.number} project={project} />)}
             </div>
-            <p className="work-note">STARTER PROJECTS — ADD YOUR OWN WORK, LINKS, AND STORIES HERE.</p>
+            <p className="work-note">PROJECT DETAILS SUMMARIZED FROM MY RESUME.</p>
           </div>
           <span className="panel-index">04 <i>/</i> 06</span>
         </section>
 
         <section className="panel panel-journey" id="journey">
           <div className="panel-inner journey-layout">
-            <SectionLabel number="04" light>THE JOURNEY SO FAR</SectionLabel>
+            <SectionLabel number="04" light>EXPERIENCE &amp; EDUCATION</SectionLabel>
             <div className="journey-heading">
-              <p className="small-overline small-overline--light">NOT A STRAIGHT LINE. A GOOD ONE.</p>
-              <h2>Still figuring it out.<br /><span>And loving that.</span></h2>
+              <p className="small-overline small-overline--light">BACKEND DEVELOPMENT &amp; SOFTWARE ENGINEERING</p>
+              <h2>Building my practice.<br /><span>Studying software.</span></h2>
               <p className="journey-intro">
-                Every project teaches me something. Here’s the part of the
-                story I’m writing right now.
+                Backend experience at Revolix Technology alongside my ongoing
+                Software Engineering degree.
               </p>
             </div>
             <div className="timeline">
@@ -489,7 +487,7 @@ function App() {
             </div>
             <div className="journey-note">
               <span className="journey-note-star">✳</span>
-              <span>THE NEXT CHAPTER IS ALWAYS THE INTERESTING PART.</span>
+              <span>VIRTUAL UNIVERSITY OF PAKISTAN · EXPECTED GRADUATION SEPTEMBER 2028</span>
             </div>
           </div>
           <span className="panel-index">05 <i>/</i> 06</span>
@@ -503,15 +501,20 @@ function App() {
                 <p className="small-overline">SOMETHING GOOD STARTS WITH A HELLO</p>
                 <h2>Have an idea?<br /><span>Let’s talk.</span></h2>
                 <p className="contact-description">
-                  Have a project in mind, a question, or just want to say hi?
-                  My inbox is open.
+                  Based in Karachi, Pakistan. Contact me by email or phone, or
+                  find me on GitHub and LinkedIn.
                 </p>
-                <a className="contact-email" href={`mailto:${portfolioEmail}`}>
-                  {portfolioEmail} <Arrow diagonal />
-                </a>
+                <div className="contact-links">
+                  <a className="contact-email" href={`mailto:${portfolioEmail}`}>
+                    {portfolioEmail} <Arrow diagonal />
+                  </a>
+                  <a className="contact-email" href={`tel:${portfolioPhone}`}>
+                    +92 328 7037013 <Arrow diagonal />
+                  </a>
+                </div>
                 <div className="social-links">
-                  <a href="https://github.com/" target="_blank" rel="noreferrer">GITHUB <Arrow diagonal /></a>
-                  <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN <Arrow diagonal /></a>
+                  <a href={githubUrl} target="_blank" rel="noreferrer">GITHUB <Arrow diagonal /></a>
+                  <a href={linkedinUrl} target="_blank" rel="noreferrer">LINKEDIN <Arrow diagonal /></a>
                 </div>
               </div>
               <form className="contact-form" onSubmit={submitContact}>
@@ -561,7 +564,7 @@ function App() {
                 <span>ABDULLAH</span>
               </a>
               <span>DESIGNED & BUILT WITH CARE</span>
-              <span>© {new Date().getFullYear()} ABDULLAH</span>
+              <span>© {new Date().getFullYear()} MUHAMMAD ABDULLAH HAMMAD</span>
               <a href="#home" onClick={(event) => goToSection(event, "home")}>BACK TO TOP ↑</a>
             </footer>
           </div>
